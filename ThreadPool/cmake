@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.21)
+project(Threadpool)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_FLAGS -pthread)
+add_subdirectory(googletest)
+add_executable(Threadpool main.cpp)
+add_executable(Tests tests.cpp)
+target_link_libraries(Tests gtest)
